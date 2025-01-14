@@ -1,16 +1,17 @@
-package web.config;
+package web.dao;
 
-import org.springframework.stereotype.Service;
+import org.springframework.stereotype.Repository;
+import web.config.Car;
 
 import java.util.ArrayList;
 import java.util.List;
 
-@Service
-public class CarService {
+@Repository
+public class CarDaoImpl implements CarDao {
 
     private List<Car> cars = new ArrayList<>();
 
-    public CarService() {
+    public CarDaoImpl() {
         cars.add(new Car("Chevrolet", "Malibu", 2017));
         cars.add(new Car("Toyota", "Camry", 2018));
         cars.add(new Car("Honda", "Civic", 2019));
@@ -18,6 +19,7 @@ public class CarService {
         cars.add(new Car("Nissan", "Altima", 2021));
     }
 
+    @Override
     public List<Car> getCars(int count) {
         if (count >= cars.size()) {
             return cars;

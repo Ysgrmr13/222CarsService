@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import web.config.Car;
-import web.config.CarService;
+import web.service.CarService;
 
 import java.util.List;
 
